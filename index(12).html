@@ -1,250 +1,644 @@
-<!-- This file contains many elements adapted from the online tutoral -->
-<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
-
-<!-- Images source: -->
-<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
-<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+<!-- Built on the provided Bootstrap 4 starter + accordion flow -->
+<!-- Starter reference: :contentReference[oaicite:2]{index=2} -->
 
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- The head should contain an appropriate title for your site -->
 <head>
-    <title>Module 4 - Labo</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nice Scissors | Book an Appointment</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <!-- Your own additional style sheet -->
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <!-- Icons (Bootstrap Icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Your theme CSS -->
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-
 <body>
-
-    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
-    <!-- Should show the name of your company with an image or logo -->
-    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
-    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
-    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
-    <div class="container-md p-3 my-3 border bg-dark text-white">
-        <h1>Welcome to Nice Scissors</h1>
-        <p>We'll take care of your hair!</p>
-    </div>
-
-    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
-    <!-- It can be useful for placement of information -->
-    <div class="row p-3">
-        <div class="col-sm-3 pl-5">Service</div>
-        <div class="col-sm-3">Calendar</div>
-        <div class="col-sm-3">Payment</div>
-        <div class="col-sm-3">Where to find us</div>
-    </div>
-
-    <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border bg-light text-success">
-        <h3>Let us tell you about our expertise</h3>
-        <p>We can <mark>cut hair</mark></p>
-        <p class="text-center" >Align wheels</p>
-        <p class="text-uppercase">Write in uppercase</p>
-        <p class="text-center text-uppercase" >centered and uppercase</p>
-    </div>
-
-
-    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
-    <!-- Might be (or not) useful to show some information to the user -->
-    <div class="container">
-        <h2>Service description</h2>
-        <p>Here is a list of services offered</p>            
-        <table class="table table-primary table-hover">
-            <thead>
-            <tr>
-                <th>Service</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Haircut</td>
-                <td>Bla bla</td>
-            </tr>
-            <tr>
-                <td>Drying</td>
-                <td>Bla bla</td>
-            </tr>
-            <tr>
-                <td>Coloring</td>
-                <td>Bla bla</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-
-    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
-    <!-- These can be useful for making sure someone reads something before continuing -->
-    <div class="container">
-        <h2>Alert</h2>
-        <p>We have something important to say</p>
-        <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Please read! </strong>You must read.
+  <!-- Top brand / visibility -->
+  <header class="ns-hero">
+    <div class="container py-4">
+      <nav class="d-flex align-items-center justify-content-between flex-wrap">
+        <div class="d-flex align-items-center">
+          <div class="ns-logo mr-3" aria-hidden="true">
+            ✂️
+          </div>
+          <div>
+            <div class="ns-brand">Nice Scissors</div>
+            <div class="ns-tagline">Modern cuts. Confident color. Zero surprises.</div>
+          </div>
         </div>
-    </div>
 
-    <!-- You'll certainly need buttons at some point in your site -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
-    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
-    <!-- This idea is already part of the components in Bootstrap -->
-    <div class="container">
-        <h2>Button States</h2>
-        <button type="button" class="btn btn-warning">Primary Button</button>
-        <button type="button" class="btn btn-warning active">Active Primary</button>
-        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
-    </div>
-
-
-    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
-    <!-- Modals are useful for additional information or questions -->
-    <!-- Here the modal is used for a little survey -->
-    <div class="container">
-        <h2>Modal Example</h2>
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
-          
-        <!-- Modal -->
-        <div class="modal fade" id="mySurvey" role="dialog">
-            <div class="modal-dialog">  
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <h2>How did you hear about us?</h2>
-                        <p>Tell us:</p>
-                        <form>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 1</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 2</label>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>     
+        <div class="ns-contact mt-3 mt-md-0">
+          <div class="ns-pill" data-toggle="tooltip" title="Where we are located">
+            <i class="bi bi-geo-alt-fill mr-1"></i>
+            123 Bank St, Ottawa, ON
+          </div>
+          <div class="ns-pill" data-toggle="tooltip" title="Call us">
+            <i class="bi bi-telephone-fill mr-1"></i>
+            (613) 555-0199
+          </div>
+          <div class="ns-pill" data-toggle="tooltip" title="Hours today">
+            <i class="bi bi-clock-fill mr-1"></i>
+            Tue–Sat 10–7 • Sun 11–4
+          </div>
         </div>
-        </div>    
-    </div>
+      </nav>
 
-    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
-    <!-- Card columns allows multiple cards next to each other -->
-    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
-    <!-- My second card limits the information seen and uses collapsible to show more -->
-    <div class="container p-3">
-        <h2>Meet our hairdressers</h2>
-        <div class="card-columns">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">Jules has been cutting hair for 10 years.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
+      <div class="row align-items-center mt-4">
+        <div class="col-lg-6">
+          <h1 class="ns-h1">Book your appointment in under a minute.</h1>
+          <p class="ns-lead">
+            Pick a service, choose a time, add your contact info — then you’ll see a confirmation right away.
+          </p>
+
+          <!-- Live summary visibility -->
+          <div class="ns-summary card mt-4" aria-live="polite">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2-circle mr-2 ns-accent"></i>
+                <strong>Your selection</strong>
+              </div>
+              <div id="summaryText" class="text-muted">
+                You haven’t chosen anything yet — start by selecting a service.
+              </div>
             </div>
-            <div class="card bg-danger" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">The curly hair specialist</p>
-                    <!-- collapsible part -->
-                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                    <div id="profile" class="collapse p-3">
-                        <p>Jules has been cutting hair for 10 years ... </p>
-                    </div>
-                </div>
+          </div>
+        </div>
+
+        <!-- Simple “inspo vibe” image block (you can swap to local images later) -->
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="ns-hero-card">
+            <img
+              class="ns-hero-img"
+              src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1600&q=70"
+              alt="Salon interior with styling chairs"
+            />
+            <div class="ns-hero-overlay">
+              <div class="ns-hero-overlay-title">Fresh look, same you.</div>
+              <div class="ns-hero-overlay-sub">Transparent pricing • Friendly experts • Clean vibe</div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </header>
 
+  <main class="container my-5">
+    <!-- Experts section (visibility + trust) -->
+    <section class="mb-5">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <h2 class="ns-h2 mb-2">Meet the experts</h2>
+        <div class="text-muted">Tap a stylist for quick details.</div>
+      </div>
 
-    <!-- A different approach would be to make the whole staff information collapsible -->
-    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
-    <!-- Here a single card is used, but card columns could be used -->
-    <div class="container">
-        <h2>More information</h2>
-        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
-        <div id="mechanics" class="collapse">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Erwind</h4>
-                    <p class="card-text">Erwind knows all about bikes.</p>
-                </div>
+      <div class="row mt-3">
+        <div class="col-md-4 mb-3">
+          <div class="card ns-card h-100">
+            <img class="card-img-top" src="https://i.pravatar.cc/600?img=32" alt="Portrait avatar of Ava" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">Ava Chen</h5>
+              <div class="text-muted mb-2">Senior Stylist • Short/Medium cuts</div>
+              <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#avaBio">
+                <i class="bi bi-info-circle mr-1"></i> About
+              </button>
+              <div id="avaBio" class="collapse mt-3 text-muted">
+                Clean fades, textured layers, and styles that grow out nicely.
+              </div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <!-- Collapsible with multiple items - accordion -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
-    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
-    <!-- could work well.  You can use other patterns too.  This is just an example. -->
-    <div class="container">
-        <div class="container-md p-3 my-3 border bg-warning text-white">
-            <h1>Erwind's and friends bike shop</h1>
-            <p>Bike fixing is our business</p>
+        <div class="col-md-4 mb-3">
+          <div class="card ns-card h-100">
+            <img class="card-img-top" src="https://i.pravatar.cc/600?img=47" alt="Portrait avatar of Marco" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">Marco Silva</h5>
+              <div class="text-muted mb-2">Color Specialist • Balayage/Gloss</div>
+              <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#marcoBio">
+                <i class="bi bi-info-circle mr-1"></i> About
+              </button>
+              <div id="marcoBio" class="collapse mt-3 text-muted">
+                Natural blends, healthy shine, and low-maintenance color plans.
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
-                </div>
-                <div id="collapseService" class="collapse show" data-parent="#accordion">
+
+        <div class="col-md-4 mb-3">
+          <div class="card ns-card h-100">
+            <img class="card-img-top" src="https://i.pravatar.cc/600?img=12" alt="Portrait avatar of Sam" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">Sam Patel</h5>
+              <div class="text-muted mb-2">Stylist • Long hair & styling</div>
+              <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="collapse" data-target="#samBio">
+                <i class="bi bi-info-circle mr-1"></i> About
+              </button>
+              <div id="samBio" class="collapse mt-3 text-muted">
+                Long layers, blowouts, and event-ready styling that lasts.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking flow (accordion) -->
+    <section class="ns-flow">
+      <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
+        <h2 class="ns-h2 mb-2">Book an appointment</h2>
+        <div class="text-muted">
+          <i class="bi bi-lightning-charge-fill mr-1"></i> Next buttons appear only when you’re ready.
+        </div>
+      </div>
+
+      <div id="accordion" class="ns-accordion">
+        <!-- Step 1: Service -->
+        <div class="card">
+          <div class="card-header" id="headingService">
+            <button class="btn btn-link ns-accordion-link" data-toggle="collapse" data-target="#collapseService" aria-expanded="true">
+              <span class="ns-step">1</span> Select a service <span class="text-muted ml-2">(pricing shown)</span>
+            </button>
+          </div>
+
+          <div id="collapseService" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              <p class="text-muted mb-3">
+                Mapping help: photos show what “short / medium / long / color” means.
+              </p>
+
+              <div class="row">
+                <!-- Service cards -->
+                <div class="col-md-6 col-lg-3 mb-3">
+                  <label class="ns-service card h-100" for="svcShort">
+                    <img class="ns-service-img"
+                         src="https://images.unsplash.com/photo-1520975958225-69e2781b3b4a?auto=format&fit=crop&w=1200&q=70"
+                         alt="Example of a short haircut" />
                     <div class="card-body">
-                        <p>Here is our list of services</p>
-                    </div>
-                </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
-                </div>
-                <div id="collapseDate" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>What date?</p>
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                        <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
-                            </div>
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <div class="ns-service-title">Short Cut</div>
+                          <div class="text-muted small">Clipper / pixie / fade</div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
-                </div>
-                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Your information so we can contact you</p>
-                        <p>Form to enter name, email, phone</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <span class="ns-price">$35</span>
+                      </div>
 
+                      <div class="custom-control custom-radio mt-3">
+                        <input type="radio" id="svcShort" name="service" class="custom-control-input"
+                               data-name="Short Cut" data-price="35" data-duration="30">
+                        <label class="custom-control-label" for="svcShort">Select</label>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-3">
+                  <label class="ns-service card h-100" for="svcMedium">
+                    <img class="ns-service-img"
+                         src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=70"
+                         alt="Example of a medium length haircut" />
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <div class="ns-service-title">Medium Cut</div>
+                          <div class="text-muted small">Bob / lob / layers</div>
+                        </div>
+                        <span class="ns-price">$45</span>
+                      </div>
+
+                      <div class="custom-control custom-radio mt-3">
+                        <input type="radio" id="svcMedium" name="service" class="custom-control-input"
+                               data-name="Medium Cut" data-price="45" data-duration="45">
+                        <label class="custom-control-label" for="svcMedium">Select</label>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-3">
+                  <label class="ns-service card h-100" for="svcLong">
+                    <img class="ns-service-img"
+                         src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=70"
+                         alt="Example of a long haircut" />
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <div class="ns-service-title">Long Cut</div>
+                          <div class="text-muted small">Long layers / shaping</div>
+                        </div>
+                        <span class="ns-price">$55</span>
+                      </div>
+
+                      <div class="custom-control custom-radio mt-3">
+                        <input type="radio" id="svcLong" name="service" class="custom-control-input"
+                               data-name="Long Cut" data-price="55" data-duration="60">
+                        <label class="custom-control-label" for="svcLong">Select</label>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-3">
+                  <label class="ns-service card h-100" for="svcColor">
+                    <img class="ns-service-img"
+                         src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=70"
+                         alt="Example of hair coloring service" />
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                          <div class="ns-service-title">Color Refresh</div>
+                          <div class="text-muted small">Gloss / tone / root</div>
+                        </div>
+                        <span class="ns-price">$85</span>
+                      </div>
+
+                      <div class="custom-control custom-radio mt-3">
+                        <input type="radio" id="svcColor" name="service" class="custom-control-input"
+                               data-name="Color Refresh" data-price="85" data-duration="90">
+                        <label class="custom-control-label" for="svcColor">Select</label>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Next appears only when service selected -->
+              <div class="d-flex justify-content-end mt-2">
+                <button id="btnToDate" class="btn btn-primary btn-lg ns-primary" type="button" style="display:none">
+                  Next: Pick a time <i class="bi bi-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Date & time -->
+        <div class="card">
+          <div class="card-header" id="headingDate">
+            <button class="btn btn-link collapsed ns-accordion-link" data-toggle="collapse" data-target="#collapseDate" aria-expanded="false">
+              <span class="ns-step">2</span> Select a date & time
+            </button>
+          </div>
+
+          <div id="collapseDate" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <div class="alert alert-info">
+                <i class="bi bi-info-circle mr-1"></i>
+                Tip: Choose a date first — timeslots will appear after.
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="dateInput"><i class="bi bi-calendar-event mr-1"></i> Date</label>
+                  <input class="form-control" type="date" id="dateInput" />
+                  <small class="form-text text-muted">We’re open Tue–Sun.</small>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="timeSelect"><i class="bi bi-clock mr-1"></i> Time</label>
+                  <select class="form-control" id="timeSelect" disabled>
+                    <option value="">Select a date first</option>
+                  </select>
+                  <small class="form-text text-muted" id="durationHint">Duration depends on service.</small>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <button class="btn btn-outline-secondary" type="button" id="btnBackToService">
+                  <i class="bi bi-arrow-left mr-1"></i> Back
+                </button>
+
+                <!-- Next appears only when date+time selected -->
+                <button id="btnToInfo" class="btn btn-primary btn-lg ns-primary" type="button" style="display:none">
+                  Next: Your info <i class="bi bi-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Contact info -->
+        <div class="card">
+          <div class="card-header" id="headingInfo">
+            <button class="btn btn-link collapsed ns-accordion-link" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false">
+              <span class="ns-step">3</span> Enter your contact info
+            </button>
+          </div>
+
+          <div id="collapseInfo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <p class="text-muted">We’ll only use this to confirm your booking.</p>
+
+              <form id="bookingForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="fullName"><i class="bi bi-person-fill mr-1"></i> Full name</label>
+                    <input class="form-control" id="fullName" type="text" placeholder="e.g., Jordan Lee" required />
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="email"><i class="bi bi-envelope-fill mr-1"></i> Email</label>
+                    <input class="form-control" id="email" type="email" placeholder="you@example.com" required />
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="phone"><i class="bi bi-telephone-fill mr-1"></i> Phone</label>
+                    <input class="form-control" id="phone" type="tel" placeholder="(555) 555-5555" required />
+                    <div class="invalid-feedback">Please enter a phone number.</div>
+                    <small class="form-text text-muted" data-toggle="tooltip" title="Tip: include your area code">
+                      We’ll text/call if anything changes.
+                    </small>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <label for="notes"><i class="bi bi-chat-left-text-fill mr-1"></i> Notes (optional)</label>
+                    <input class="form-control" id="notes" type="text" placeholder="Allergies, inspiration, etc." />
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <button class="btn btn-outline-secondary" type="button" id="btnBackToDate">
+                    <i class="bi bi-arrow-left mr-1"></i> Back
+                  </button>
+
+                  <!-- Primary action: only enabled when ready -->
+                  <button id="btnSubmit" class="btn btn-success btn-lg ns-primary" type="submit" disabled>
+                    Book now <i class="bi bi-check2 ml-1"></i>
+                  </button>
+                </div>
+
+                <div class="text-muted mt-3 small">
+                  By booking, you agree to arrive on time. Need to reschedule? Call us.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirmation state (same page) -->
+      <section id="confirmation" class="ns-confirm card mt-4" style="display:none">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <div class="ns-confirm-icon mr-3"><i class="bi bi-check2-circle"></i></div>
+            <div>
+              <h3 class="mb-1">Booking confirmed!</h3>
+              <div class="text-muted">We’ve saved your appointment. A confirmation message will be sent shortly.</div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row">
+            <div class="col-md-6">
+              <h5 class="mb-2">Appointment details</h5>
+              <div id="confirmDetails" class="text-muted"></div>
+            </div>
+            <div class="col-md-6">
+              <h5 class="mb-2">Where to go</h5>
+              <div class="text-muted">
+                <div><i class="bi bi-geo-alt-fill mr-1"></i> 123 Bank St, Ottawa, ON</div>
+                <div><i class="bi bi-telephone-fill mr-1"></i> (613) 555-0199</div>
+                <div><i class="bi bi-clock-fill mr-1"></i> Tue–Sat 10–7 • Sun 11–4</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end mt-3">
+            <button id="btnStartOver" class="btn btn-outline-primary">
+              Start over <i class="bi bi-arrow-counterclockwise ml-1"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer / visibility -->
+    <footer class="ns-footer mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="ns-brand mb-1">Nice Scissors</div>
+          <div class="text-muted small">Precision cuts + color with transparent pricing.</div>
+        </div>
+        <div class="col-md-6 text-md-right mt-3 mt-md-0">
+          <div class="text-muted small">
+            <i class="bi bi-geo-alt mr-1"></i> 123 Bank St, Ottawa, ON &nbsp;•&nbsp;
+            <i class="bi bi-telephone mr-1"></i> (613) 555-0199
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Enable Bootstrap tooltips
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    const state = {
+      serviceName: "",
+      servicePrice: 0,
+      serviceDuration: 0,
+      date: "",
+      time: "",
+      fullName: "",
+      email: "",
+      phone: "",
+      notes: ""
+    };
+
+    const summaryText = document.getElementById("summaryText");
+    const btnToDate = document.getElementById("btnToDate");
+    const btnToInfo = document.getElementById("btnToInfo");
+    const btnSubmit = document.getElementById("btnSubmit");
+
+    const dateInput = document.getElementById("dateInput");
+    const timeSelect = document.getElementById("timeSelect");
+    const durationHint = document.getElementById("durationHint");
+
+    const bookingForm = document.getElementById("bookingForm");
+    const confirmation = document.getElementById("confirmation");
+    const confirmDetails = document.getElementById("confirmDetails");
+
+    // Utilities
+    function money(n) {
+      return "$" + Number(n).toFixed(2);
+    }
+
+    function updateSummary() {
+      const parts = [];
+
+      if (state.serviceName) {
+        parts.push(`<strong>Service:</strong> ${state.serviceName} (${money(state.servicePrice)})`);
+      } else {
+        parts.push(`<strong>Service:</strong> not selected`);
+      }
+
+      if (state.date && state.time) {
+        parts.push(`<strong>When:</strong> ${state.date} at ${state.time}`);
+      } else {
+        parts.push(`<strong>When:</strong> not selected`);
+      }
+
+      summaryText.innerHTML = "You chose…<br>" + parts.join("<br>");
+    }
+
+    function openAccordion(targetId) {
+      // close others by Bootstrap collapse, then show target
+      $(".collapse").collapse("hide");
+      $(targetId).collapse("show");
+      window.scrollTo({ top: document.querySelector("#accordion").offsetTop - 20, behavior: "smooth" });
+    }
+
+    function buildTimeslots() {
+      // Simple slots — you can change these
+      const slots = ["10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00", "5:30", "6:00"];
+      timeSelect.innerHTML = `<option value="">Choose a time</option>` + slots.map(t => `<option value="${t}">${t}</option>`).join("");
+      timeSelect.disabled = false;
+    }
+
+    function validateStep2() {
+      const ready = Boolean(state.date && state.time);
+      btnToInfo.style.display = ready ? "inline-flex" : "none";
+      updateSummary();
+    }
+
+    function validateFormReadiness() {
+      // Minimal, clear validation
+      const nameOk = state.fullName.trim().length >= 2;
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.email.trim());
+      const phoneOk = state.phone.trim().length >= 7;
+
+      btnSubmit.disabled = !(nameOk && emailOk && phoneOk && state.serviceName && state.date && state.time);
+      updateSummary();
+    }
+
+    // Step 1: service selection
+    document.querySelectorAll('input[name="service"]').forEach(radio => {
+      radio.addEventListener("change", (e) => {
+        const el = e.target;
+        state.serviceName = el.dataset.name;
+        state.servicePrice = Number(el.dataset.price);
+        state.serviceDuration = Number(el.dataset.duration);
+
+        durationHint.textContent = `Estimated duration: ${state.serviceDuration} minutes.`;
+        btnToDate.style.display = "inline-flex";
+        updateSummary();
+      });
+    });
+
+    btnToDate.addEventListener("click", () => openAccordion("#collapseDate"));
+
+    // Step 2: date/time
+    // Set min date to today (local)
+    (function setMinDate() {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, "0");
+      const dd = String(today.getDate()).padStart(2, "0");
+      dateInput.min = `${yyyy}-${mm}-${dd}`;
+    })();
+
+    dateInput.addEventListener("change", () => {
+      state.date = dateInput.value;
+      state.time = "";
+      buildTimeslots();
+      timeSelect.value = "";
+      validateStep2();
+    });
+
+    timeSelect.addEventListener("change", () => {
+      state.time = timeSelect.value;
+      validateStep2();
+    });
+
+    btnToInfo.addEventListener("click", () => openAccordion("#collapseInfo"));
+
+    document.getElementById("btnBackToService").addEventListener("click", () => openAccordion("#collapseService"));
+    document.getElementById("btnBackToDate").addEventListener("click", () => openAccordion("#collapseDate"));
+
+    // Step 3: contact info
+    ["fullName", "email", "phone", "notes"].forEach(id => {
+      document.getElementById(id).addEventListener("input", (e) => {
+        state[id] = e.target.value;
+        validateFormReadiness();
+      });
+    });
+
+    bookingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Trigger Bootstrap-style invalid feedback
+      bookingForm.classList.add("was-validated");
+      validateFormReadiness();
+      if (btnSubmit.disabled) return;
+
+      // Show confirmation (same page)
+      confirmDetails.innerHTML = `
+        <div><strong>Service:</strong> ${state.serviceName} (${money(state.servicePrice)})</div>
+        <div><strong>Date:</strong> ${state.date}</div>
+        <div><strong>Time:</strong> ${state.time}</div>
+        <div><strong>Name:</strong> ${escapeHtml(state.fullName)}</div>
+        <div><strong>Email:</strong> ${escapeHtml(state.email)}</div>
+        <div><strong>Phone:</strong> ${escapeHtml(state.phone)}</div>
+        ${state.notes ? `<div><strong>Notes:</strong> ${escapeHtml(state.notes)}</div>` : ""}
+      `;
+
+      confirmation.style.display = "block";
+      window.scrollTo({ top: confirmation.offsetTop - 20, behavior: "smooth" });
+    });
+
+    document.getElementById("btnStartOver").addEventListener("click", () => {
+      // Reset state + UI
+      state.serviceName = "";
+      state.servicePrice = 0;
+      state.serviceDuration = 0;
+      state.date = "";
+      state.time = "";
+      state.fullName = "";
+      state.email = "";
+      state.phone = "";
+      state.notes = "";
+
+      document.querySelectorAll('input[name="service"]').forEach(r => r.checked = false);
+      btnToDate.style.display = "none";
+      btnToInfo.style.display = "none";
+      dateInput.value = "";
+      timeSelect.innerHTML = `<option value="">Select a date first</option>`;
+      timeSelect.disabled = true;
+
+      ["fullName", "email", "phone", "notes"].forEach(id => document.getElementById(id).value = "");
+      bookingForm.classList.remove("was-validated");
+      btnSubmit.disabled = true;
+
+      confirmation.style.display = "none";
+      updateSummary();
+      openAccordion("#collapseService");
+    });
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    // Initial summary
+    updateSummary();
+  </script>
 </body>
 </html>
