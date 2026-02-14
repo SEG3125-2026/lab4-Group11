@@ -1,6 +1,285 @@
+/* Replaces the minimal starter CSS (previously only h1 styling) */
+/* Starter CSS reference: :contentReference[oaicite:4]{index=4} */
 
-h1 {
-  font-family: "Times New Roman", Times, serif;
-  text-shadow: 3px 3px 1px black;
-  
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root{
+  --bg: #0b0f14;
+  --panel: #101824;
+  --panel2: #0f1520;
+  --text: #eef2f7;
+  --muted: rgba(238,242,247,0.75);
+  --card: #0f1724;
+  --border: rgba(255,255,255,0.10);
+  --accent: #c8ff6a; /* lime accent */
+  --accent2: #8de3ff; /* cool highlight */
+  --shadow: 0 18px 40px rgba(0,0,0,0.35);
+  --radius: 18px;
+}
+
+html, body{
+  background: radial-gradient(1200px 700px at 20% 0%, rgba(141,227,255,0.12), transparent 60%),
+              radial-gradient(900px 600px at 85% 10%, rgba(200,255,106,0.10), transparent 55%),
+              var(--bg);
+  color: var(--text);
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+a, .btn-link{
+  text-decoration: none !important;
+}
+
+.ns-hero{
+  background: linear-gradient(180deg, rgba(16,24,36,0.9), rgba(11,15,20,0.9));
+  border-bottom: 1px solid var(--border);
+}
+
+.ns-logo{
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(200,255,106,0.25), rgba(141,227,255,0.15));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  font-size: 20px;
+}
+
+.ns-brand{
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.2px;
+}
+
+.ns-tagline{
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.ns-contact{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.ns-pill{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.ns-h1{
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.ns-lead{
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.ns-accent{
+  color: var(--accent);
+}
+
+.ns-summary{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.ns-hero-card{
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.ns-hero-img{
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.05) saturate(1.05);
+}
+
+.ns-hero-overlay{
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 16px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.75));
+}
+
+.ns-hero-overlay-title{
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.ns-hero-overlay-sub{
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+}
+
+.ns-h2{
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.ns-card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.ns-card .card-body{
+  color: var(--text);
+}
+
+.ns-flow .card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.ns-accordion-link{
+  width: 100%;
+  text-align: left;
+  color: var(--text) !important;
+  font-weight: 600;
+  padding: 12px 4px;
+}
+
+.ns-step{
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  display: inline-grid;
+  place-items: center;
+  margin-right: 10px;
+  background: rgba(200,255,106,0.18);
+  border: 1px solid rgba(200,255,106,0.25);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.ns-service{
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  background: rgba(255,255,255,0.04);
+}
+
+.ns-service:hover{
+  transform: translateY(-2px);
+  border-color: rgba(200,255,106,0.35);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.ns-service-img{
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+.ns-service-title{
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.ns-price{
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(200,255,106,0.12);
+  border: 1px solid rgba(200,255,106,0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+}
+
+.custom-control-label{
+  cursor: pointer;
+}
+
+.ns-primary{
+  border-radius: 14px !important;
+  font-weight: 700 !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
+
+.btn-primary{
+  background: linear-gradient(135deg, rgba(141,227,255,0.95), rgba(200,255,106,0.90)) !important;
+  border: none !important;
+  color: #081019 !important;
+}
+
+.btn-success{
+  background: linear-gradient(135deg, rgba(200,255,106,0.95), rgba(141,227,255,0.85)) !important;
+  border: none !important;
+  color: #081019 !important;
+}
+
+.btn-outline-secondary{
+  border-color: rgba(255,255,255,0.28) !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.form-control{
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(10,14,20,0.55);
+  color: var(--text);
+}
+
+.form-control:focus{
+  border-color: rgba(141,227,255,0.45);
+  box-shadow: 0 0 0 0.2rem rgba(141,227,255,0.12);
+  background: rgba(10,14,20,0.70);
+  color: var(--text);
+}
+
+.alert{
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.ns-confirm{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(200,255,106,0.22);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.ns-confirm-icon{
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(200,255,106,0.16);
+  border: 1px solid rgba(200,255,106,0.25);
+  color: var(--accent);
+  font-size: 22px;
+}
+
+.ns-footer{
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  color: var(--muted);
 }
