@@ -1,6 +1,3 @@
-<!-- Built on the provided Bootstrap 4 starter + accordion flow -->
-<!-- Starter reference: :contentReference[oaicite:2]{index=2} -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-  <!-- Icons (Bootstrap Icons) -->
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
   <!-- Your theme CSS -->
@@ -22,14 +19,11 @@
 </head>
 
 <body>
-  <!-- Top brand / visibility -->
   <header class="ns-hero">
     <div class="container py-4">
       <nav class="d-flex align-items-center justify-content-between flex-wrap">
         <div class="d-flex align-items-center">
-          <div class="ns-logo mr-3" aria-hidden="true">
-            ✂️
-          </div>
+          <div class="ns-logo mr-3" aria-hidden="true">✂️</div>
           <div>
             <div class="ns-brand">Nice Scissors</div>
             <div class="ns-tagline">Modern cuts. Confident color. Zero surprises.</div>
@@ -38,16 +32,13 @@
 
         <div class="ns-contact mt-3 mt-md-0">
           <div class="ns-pill" data-toggle="tooltip" title="Where we are located">
-            <i class="bi bi-geo-alt-fill mr-1"></i>
-            123 Bank St, Ottawa, ON
+            <i class="bi bi-geo-alt-fill mr-1"></i> 123 Bank St, Ottawa, ON
           </div>
           <div class="ns-pill" data-toggle="tooltip" title="Call us">
-            <i class="bi bi-telephone-fill mr-1"></i>
-            (613) 555-0199
+            <i class="bi bi-telephone-fill mr-1"></i> (613) 555-0199
           </div>
           <div class="ns-pill" data-toggle="tooltip" title="Hours today">
-            <i class="bi bi-clock-fill mr-1"></i>
-            Tue–Sat 10–7 • Sun 11–4
+            <i class="bi bi-clock-fill mr-1"></i> Tue–Sat 10–7 • Sun 11–4
           </div>
         </div>
       </nav>
@@ -59,7 +50,6 @@
             Pick a service, choose a time, add your contact info — then you’ll see a confirmation right away.
           </p>
 
-          <!-- Live summary visibility -->
           <div class="ns-summary card mt-4" aria-live="polite">
             <div class="card-body">
               <div class="d-flex align-items-center mb-2">
@@ -73,14 +63,9 @@
           </div>
         </div>
 
-        <!-- Simple “inspo vibe” image block (you can swap to local images later) -->
         <div class="col-lg-6 mt-4 mt-lg-0">
           <div class="ns-hero-card">
-            <img
-              class="ns-hero-img"
-              src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1600&q=70"
-              alt="Salon interior with styling chairs"
-            />
+            <img class="ns-hero-img" src="images/hero-salon.jpg" alt="Salon interior with styling chairs" />
             <div class="ns-hero-overlay">
               <div class="ns-hero-overlay-title">Fresh look, same you.</div>
               <div class="ns-hero-overlay-sub">Transparent pricing • Friendly experts • Clean vibe</div>
@@ -92,7 +77,7 @@
   </header>
 
   <main class="container my-5">
-    <!-- Experts section (visibility + trust) -->
+    <!-- Experts -->
     <section class="mb-5">
       <div class="d-flex align-items-center justify-content-between flex-wrap">
         <h2 class="ns-h2 mb-2">Meet the experts</h2>
@@ -102,7 +87,7 @@
       <div class="row mt-3">
         <div class="col-md-4 mb-3">
           <div class="card ns-card h-100">
-            <img class="card-img-top" src="https://i.pravatar.cc/600?img=32" alt="Portrait avatar of Ava" />
+            <img class="card-img-top" src="images/stylist-ava.jpg" alt="Portrait of Ava" />
             <div class="card-body">
               <h5 class="card-title mb-1">Ava Chen</h5>
               <div class="text-muted mb-2">Senior Stylist • Short/Medium cuts</div>
@@ -118,7 +103,7 @@
 
         <div class="col-md-4 mb-3">
           <div class="card ns-card h-100">
-            <img class="card-img-top" src="https://i.pravatar.cc/600?img=47" alt="Portrait avatar of Marco" />
+            <img class="card-img-top" src="images/stylist-marco.jpg" alt="Portrait of Marco" />
             <div class="card-body">
               <h5 class="card-title mb-1">Marco Silva</h5>
               <div class="text-muted mb-2">Color Specialist • Balayage/Gloss</div>
@@ -134,7 +119,7 @@
 
         <div class="col-md-4 mb-3">
           <div class="card ns-card h-100">
-            <img class="card-img-top" src="https://i.pravatar.cc/600?img=12" alt="Portrait avatar of Sam" />
+            <img class="card-img-top" src="images/stylist-sam.jpg" alt="Portrait of Sam" />
             <div class="card-body">
               <h5 class="card-title mb-1">Sam Patel</h5>
               <div class="text-muted mb-2">Stylist • Long hair & styling</div>
@@ -150,7 +135,7 @@
       </div>
     </section>
 
-    <!-- Booking flow (accordion) -->
+    <!-- Booking flow -->
     <section class="ns-flow">
       <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
         <h2 class="ns-h2 mb-2">Book an appointment</h2>
@@ -175,12 +160,9 @@
               </p>
 
               <div class="row">
-                <!-- Service cards -->
                 <div class="col-md-6 col-lg-3 mb-3">
                   <label class="ns-service card h-100" for="svcShort">
-                    <img class="ns-service-img"
-                         src="https://images.unsplash.com/photo-1520975958225-69e2781b3b4a?auto=format&fit=crop&w=1200&q=70"
-                         alt="Example of a short haircut" />
+                    <img class="ns-service-img" src="images/service-short.jpg" alt="Example of a short haircut" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -189,7 +171,6 @@
                         </div>
                         <span class="ns-price">$35</span>
                       </div>
-
                       <div class="custom-control custom-radio mt-3">
                         <input type="radio" id="svcShort" name="service" class="custom-control-input"
                                data-name="Short Cut" data-price="35" data-duration="30">
@@ -201,9 +182,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-3">
                   <label class="ns-service card h-100" for="svcMedium">
-                    <img class="ns-service-img"
-                         src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=70"
-                         alt="Example of a medium length haircut" />
+                    <img class="ns-service-img" src="images/service-medium.jpg" alt="Example of a medium length haircut" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -212,7 +191,6 @@
                         </div>
                         <span class="ns-price">$45</span>
                       </div>
-
                       <div class="custom-control custom-radio mt-3">
                         <input type="radio" id="svcMedium" name="service" class="custom-control-input"
                                data-name="Medium Cut" data-price="45" data-duration="45">
@@ -224,9 +202,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-3">
                   <label class="ns-service card h-100" for="svcLong">
-                    <img class="ns-service-img"
-                         src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=70"
-                         alt="Example of a long haircut" />
+                    <img class="ns-service-img" src="images/service-long.jpg" alt="Example of a long haircut" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -235,7 +211,6 @@
                         </div>
                         <span class="ns-price">$55</span>
                       </div>
-
                       <div class="custom-control custom-radio mt-3">
                         <input type="radio" id="svcLong" name="service" class="custom-control-input"
                                data-name="Long Cut" data-price="55" data-duration="60">
@@ -247,9 +222,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-3">
                   <label class="ns-service card h-100" for="svcColor">
-                    <img class="ns-service-img"
-                         src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=70"
-                         alt="Example of hair coloring service" />
+                    <img class="ns-service-img" src="images/service-color.jpg" alt="Example of hair coloring service" />
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -258,7 +231,6 @@
                         </div>
                         <span class="ns-price">$85</span>
                       </div>
-
                       <div class="custom-control custom-radio mt-3">
                         <input type="radio" id="svcColor" name="service" class="custom-control-input"
                                data-name="Color Refresh" data-price="85" data-duration="90">
@@ -269,7 +241,6 @@
                 </div>
               </div>
 
-              <!-- Next appears only when service selected -->
               <div class="d-flex justify-content-end mt-2">
                 <button id="btnToDate" class="btn btn-primary btn-lg ns-primary" type="button" style="display:none">
                   Next: Pick a time <i class="bi bi-arrow-right ml-1"></i>
@@ -315,7 +286,6 @@
                   <i class="bi bi-arrow-left mr-1"></i> Back
                 </button>
 
-                <!-- Next appears only when date+time selected -->
                 <button id="btnToInfo" class="btn btn-primary btn-lg ns-primary" type="button" style="display:none">
                   Next: Your info <i class="bi bi-arrow-right ml-1"></i>
                 </button>
@@ -372,7 +342,6 @@
                     <i class="bi bi-arrow-left mr-1"></i> Back
                   </button>
 
-                  <!-- Primary action: only enabled when ready -->
                   <button id="btnSubmit" class="btn btn-success btn-lg ns-primary" type="submit" disabled>
                     Book now <i class="bi bi-check2 ml-1"></i>
                   </button>
@@ -387,7 +356,7 @@
         </div>
       </div>
 
-      <!-- Confirmation state (same page) -->
+      <!-- Confirmation state -->
       <section id="confirmation" class="ns-confirm card mt-4" style="display:none">
         <div class="card-body">
           <div class="d-flex align-items-center">
@@ -424,7 +393,6 @@
       </section>
     </section>
 
-    <!-- Footer / visibility -->
     <footer class="ns-footer mt-5">
       <div class="row">
         <div class="col-md-6">
@@ -441,204 +409,7 @@
     </footer>
   </main>
 
-  <script>
-    // Enable Bootstrap tooltips
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-
-    const state = {
-      serviceName: "",
-      servicePrice: 0,
-      serviceDuration: 0,
-      date: "",
-      time: "",
-      fullName: "",
-      email: "",
-      phone: "",
-      notes: ""
-    };
-
-    const summaryText = document.getElementById("summaryText");
-    const btnToDate = document.getElementById("btnToDate");
-    const btnToInfo = document.getElementById("btnToInfo");
-    const btnSubmit = document.getElementById("btnSubmit");
-
-    const dateInput = document.getElementById("dateInput");
-    const timeSelect = document.getElementById("timeSelect");
-    const durationHint = document.getElementById("durationHint");
-
-    const bookingForm = document.getElementById("bookingForm");
-    const confirmation = document.getElementById("confirmation");
-    const confirmDetails = document.getElementById("confirmDetails");
-
-    // Utilities
-    function money(n) {
-      return "$" + Number(n).toFixed(2);
-    }
-
-    function updateSummary() {
-      const parts = [];
-
-      if (state.serviceName) {
-        parts.push(`<strong>Service:</strong> ${state.serviceName} (${money(state.servicePrice)})`);
-      } else {
-        parts.push(`<strong>Service:</strong> not selected`);
-      }
-
-      if (state.date && state.time) {
-        parts.push(`<strong>When:</strong> ${state.date} at ${state.time}`);
-      } else {
-        parts.push(`<strong>When:</strong> not selected`);
-      }
-
-      summaryText.innerHTML = "You chose…<br>" + parts.join("<br>");
-    }
-
-    function openAccordion(targetId) {
-      // close others by Bootstrap collapse, then show target
-      $(".collapse").collapse("hide");
-      $(targetId).collapse("show");
-      window.scrollTo({ top: document.querySelector("#accordion").offsetTop - 20, behavior: "smooth" });
-    }
-
-    function buildTimeslots() {
-      // Simple slots — you can change these
-      const slots = ["10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00", "5:30", "6:00"];
-      timeSelect.innerHTML = `<option value="">Choose a time</option>` + slots.map(t => `<option value="${t}">${t}</option>`).join("");
-      timeSelect.disabled = false;
-    }
-
-    function validateStep2() {
-      const ready = Boolean(state.date && state.time);
-      btnToInfo.style.display = ready ? "inline-flex" : "none";
-      updateSummary();
-    }
-
-    function validateFormReadiness() {
-      // Minimal, clear validation
-      const nameOk = state.fullName.trim().length >= 2;
-      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.email.trim());
-      const phoneOk = state.phone.trim().length >= 7;
-
-      btnSubmit.disabled = !(nameOk && emailOk && phoneOk && state.serviceName && state.date && state.time);
-      updateSummary();
-    }
-
-    // Step 1: service selection
-    document.querySelectorAll('input[name="service"]').forEach(radio => {
-      radio.addEventListener("change", (e) => {
-        const el = e.target;
-        state.serviceName = el.dataset.name;
-        state.servicePrice = Number(el.dataset.price);
-        state.serviceDuration = Number(el.dataset.duration);
-
-        durationHint.textContent = `Estimated duration: ${state.serviceDuration} minutes.`;
-        btnToDate.style.display = "inline-flex";
-        updateSummary();
-      });
-    });
-
-    btnToDate.addEventListener("click", () => openAccordion("#collapseDate"));
-
-    // Step 2: date/time
-    // Set min date to today (local)
-    (function setMinDate() {
-      const today = new Date();
-      const yyyy = today.getFullYear();
-      const mm = String(today.getMonth() + 1).padStart(2, "0");
-      const dd = String(today.getDate()).padStart(2, "0");
-      dateInput.min = `${yyyy}-${mm}-${dd}`;
-    })();
-
-    dateInput.addEventListener("change", () => {
-      state.date = dateInput.value;
-      state.time = "";
-      buildTimeslots();
-      timeSelect.value = "";
-      validateStep2();
-    });
-
-    timeSelect.addEventListener("change", () => {
-      state.time = timeSelect.value;
-      validateStep2();
-    });
-
-    btnToInfo.addEventListener("click", () => openAccordion("#collapseInfo"));
-
-    document.getElementById("btnBackToService").addEventListener("click", () => openAccordion("#collapseService"));
-    document.getElementById("btnBackToDate").addEventListener("click", () => openAccordion("#collapseDate"));
-
-    // Step 3: contact info
-    ["fullName", "email", "phone", "notes"].forEach(id => {
-      document.getElementById(id).addEventListener("input", (e) => {
-        state[id] = e.target.value;
-        validateFormReadiness();
-      });
-    });
-
-    bookingForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      // Trigger Bootstrap-style invalid feedback
-      bookingForm.classList.add("was-validated");
-      validateFormReadiness();
-      if (btnSubmit.disabled) return;
-
-      // Show confirmation (same page)
-      confirmDetails.innerHTML = `
-        <div><strong>Service:</strong> ${state.serviceName} (${money(state.servicePrice)})</div>
-        <div><strong>Date:</strong> ${state.date}</div>
-        <div><strong>Time:</strong> ${state.time}</div>
-        <div><strong>Name:</strong> ${escapeHtml(state.fullName)}</div>
-        <div><strong>Email:</strong> ${escapeHtml(state.email)}</div>
-        <div><strong>Phone:</strong> ${escapeHtml(state.phone)}</div>
-        ${state.notes ? `<div><strong>Notes:</strong> ${escapeHtml(state.notes)}</div>` : ""}
-      `;
-
-      confirmation.style.display = "block";
-      window.scrollTo({ top: confirmation.offsetTop - 20, behavior: "smooth" });
-    });
-
-    document.getElementById("btnStartOver").addEventListener("click", () => {
-      // Reset state + UI
-      state.serviceName = "";
-      state.servicePrice = 0;
-      state.serviceDuration = 0;
-      state.date = "";
-      state.time = "";
-      state.fullName = "";
-      state.email = "";
-      state.phone = "";
-      state.notes = "";
-
-      document.querySelectorAll('input[name="service"]').forEach(r => r.checked = false);
-      btnToDate.style.display = "none";
-      btnToInfo.style.display = "none";
-      dateInput.value = "";
-      timeSelect.innerHTML = `<option value="">Select a date first</option>`;
-      timeSelect.disabled = true;
-
-      ["fullName", "email", "phone", "notes"].forEach(id => document.getElementById(id).value = "");
-      bookingForm.classList.remove("was-validated");
-      btnSubmit.disabled = true;
-
-      confirmation.style.display = "none";
-      updateSummary();
-      openAccordion("#collapseService");
-    });
-
-    function escapeHtml(str) {
-      return String(str)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-
-    // Initial summary
-    updateSummary();
-  </script>
+  <!-- ✅ NEW: external JS file -->
+  <script src="scripts/booking.js"></script>
 </body>
 </html>
