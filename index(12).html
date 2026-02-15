@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Nice Scissors | Book an Appointment</title>
+  <title>Lumière Salon | Book an Appointment</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
   <!-- Your theme CSS -->
-  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="styles/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -23,10 +23,10 @@
     <div class="container py-4">
       <nav class="d-flex align-items-center justify-content-between flex-wrap">
         <div class="d-flex align-items-center">
-          <div class="ns-logo mr-3" aria-hidden="true">✂️</div>
+          <img src="images/logo.jpg" alt="Lumière Salon Logo" class="site-logo">
           <div>
-            <div class="ns-brand">Nice Scissors</div>
-            <div class="ns-tagline">Modern cuts. Confident color. Zero surprises.</div>
+            <div class="ns-brand">Lumière Salon</div>
+            <div class="ns-tagline">Illuminating your natural beauty with precision, artistry, and care.</div>
           </div>
         </div>
 
@@ -135,12 +135,124 @@
       </div>
     </section>
 
+    <!-- Hover Caption Gallery -->
+    <section class="mb-5" aria-label="Style Gallery">
+      <div class="d-flex align-items-center justify-content-between flex-wrap">
+        <h2 class="ns-h2 mb-2">Style Gallery</h2>
+        <div class="text-muted">Hover to Explore!</div>
+      </div>
+
+      <div class="row mt-3">
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+            <img src="images/gallery-short.jpg" alt="Modern Short Textured Haircut">
+            <div class="gallery-overlay">
+              <h6>Modern Short Cut</h6>
+              <small>Clean Fade with Sift Texture.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+            <img src="images/gallery-clipper.jpg" alt="Short Clipper Haircut">
+            <div class="gallery-overlay">
+              <h6>Clipper Short Cut</h6>
+              <small>Clean Fade.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+            <img src="images/gallery-medium-layers.jpg" alt="Layered Medium Haircut">
+            <div class="gallery-overlay">
+              <h6>Layered Medium Cut</h6>
+              <small>Volume and Movement.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+            <img src="images/gallery-medium.jpg" alt="Blunt Medium with Soft Curl Haircut">
+            <div class="gallery-overlay">
+              <h6>Blunt Medium with Soft Culrs</h6>
+              <small>Length and Sleekness.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+            <img src="images/gallery-medium-butterfly.jpg" alt="Medium Length Haircut with Curtain Bangs">
+            <div class="gallery-overlay">
+              <h6>Butterfly Medium Cut with Curtain Bangs</h6>
+              <small>Softness and Face-Framing.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+            <img src="images/gallery-long-cascade.jpg" alt="Long Styled Haircut">
+            <div class="gallery-overlay">
+              <h6>Long Flowing Cascade Haircut</h6>
+              <small>Elegant Length.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+            <img src="images/gallery-long-layers.jpg" alt="Long Haircut with Many Layers">
+            <div class="gallery-overlay">
+              <h6>Great Length with Many Layers</h6>
+              <small>Length and Movement</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="gallery-item">
+            <img src="images/gallery-balayage.jpg" alt="Long Haircut with Balayage">
+            <div class="gallery-overlay">
+              <h6>Soft Waves with Balayage</h6>
+              <small>Colors and Shades</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Booking flow -->
     <section class="ns-flow">
       <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
         <h2 class="ns-h2 mb-2">Book an appointment</h2>
         <div class="text-muted">
           <i class="bi bi-lightning-charge-fill mr-1"></i> Next buttons appear only when you’re ready.
+        </div>
+      </div>
+
+      <!-- Progress Tracking-->
+      <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
+        <small class="text-muted" id="progressLabel">Step 1 of 3</small>
+        <small class="text-muted" id="progressPercent">0%</small>
+      </div>
+
+      <div class="progress mb-3" style="height: 18px;">
+        <div
+          id="bookingProgressBar"
+          class="progress-bar"
+          role="progressbar"
+          style="width: 0%;"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+        0%
         </div>
       </div>
 
@@ -396,7 +508,7 @@
     <footer class="ns-footer mt-5">
       <div class="row">
         <div class="col-md-6">
-          <div class="ns-brand mb-1">Nice Scissors</div>
+          <div class="ns-brand mb-1">Lumière Salon</div>
           <div class="text-muted small">Precision cuts + color with transparent pricing.</div>
         </div>
         <div class="col-md-6 text-md-right mt-3 mt-md-0">
@@ -410,6 +522,6 @@
   </main>
 
   <!-- ✅ NEW: external JS file -->
-  <script src="scripts/booking.js"></script>
+  <script src="scripts/bookings.js"></script>
 </body>
 </html>
