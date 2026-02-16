@@ -25,6 +25,8 @@ const btnSubmit = document.getElementById("btnSubmit");
 const dateInput = document.getElementById("dateInput");
 const timeSelect = document.getElementById("timeSelect");
 const durationHint = document.getElementById("durationHint");
+const step2Btn = document.querySelector('#headingDate button');
+const step3Btn = document.querySelector('#headingInfo button');
 
 const bookingForm = document.getElementById("bookingForm");
 const confirmation = document.getElementById("confirmation");
@@ -33,6 +35,18 @@ const confirmDetails = document.getElementById("confirmDetails");
 const progressBar = document.getElementById("bookingProgressBar");
 const progressLabel = document.getElementById("progressLabel");
 const progressPercent = document.getElementById("progressPercent");
+
+step2Btn.addEventListener("click", (e) => {
+  if(!state.serviceName) {
+    e.stopPropagation();
+  }
+})
+
+step3Btn.addEventListener("click", function(e) {
+  if(!(state.date && state.time)) {
+    e.stopPropagation();
+  }
+});
 
 function setProgress(pct, stepText) {
   const p = Math.max(0, Math.min(100, pct));
@@ -77,9 +91,9 @@ function openAccordion(targetId) {
 
 function buildTimeslots() {
   const slots = [
-    "10:00","10:30","11:00","11:30","12:00","12:30",
-    "1:00","1:30","2:00","2:30","3:00","3:30",
-    "4:00","4:30","5:00","5:30","6:00"
+    "10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM",
+    "1:00 PM","1:30 PM","2:00 PM","2:30 PM","3:00 PM","3:30 PM",
+    "4:00 PM","4:30 PM","5:00 PM","5:30 PM","6:00 PM"
   ];
 
   timeSelect.innerHTML =
@@ -136,6 +150,7 @@ document.querySelectorAll('input[name="service"]').forEach(radio => {
     durationHint.textContent = `Estimated duration: ${state.serviceDuration} minutes.`;
     btnToDate.style.display = "inline-flex";
     setProgress(33, "Step 1 of 3");
+    dateInput.disabled = false;
     updateSummary();
   });
 });
